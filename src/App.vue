@@ -10,14 +10,16 @@ function scrollToSection(id) {
 <template>
   <header class="p-5">
     <nav class="container flex gap-5 justify-end">
-      <ul>
+      <ul class="flex gap-5">
         <li>
           <button @click="scrollToSection('methodology')">Methodology</button>
+        </li>
+        <li>
+          <button @click="scrollToSection('about')">About</button>
         </li>
       </ul>
 
       <RouterLink to="/">Home</RouterLink>
-      <RouterLink to="/about">About</RouterLink>
     </nav>
   </header>
 
