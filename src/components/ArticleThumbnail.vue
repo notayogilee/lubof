@@ -26,11 +26,10 @@ const onMouseOut = () => {
         :class="isHovering ? 'px-3 pb-3 pt-20' : 'px-5 pb-5 pt-16'"
       >
         <h2
+          v-html="title"
           class="absolute bottom-5 left-5 text-white transition-all ease-in-out duration-500"
           :class="isHovering ? 'text-3xl text-bold' : 'text-2xl'"
-        >
-          {{ title }}
-        </h2>
+        ></h2>
       </div>
       <img
         class="transition-all ease-in-out duration-500"

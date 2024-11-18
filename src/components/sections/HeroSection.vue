@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <section id="hero" class="container mx-auto h-screen w-full">
+  <section id="hero" class="container mx-auto w-full max-[1920px]:min-h-screen">
     <aside class="max-w-fit mx-auto text-center my-10">
       <h1 class="">Lubof: love in Bulgarian</h1>
       <h2 class="">The Sanctuary of LUBOF holds as its vision</h2>
@@ -9,7 +9,9 @@
       <h2 class="">love is our guiding inspiration</h2>
     </aside>
 
-    <div class="aside flex justify-evenly gap-5">
+    <div
+      class="aside flex flex-col md:flex-row justify-evenly items-center gap-5"
+    >
       <aside class="max-w-80">
         <div
           class="flex justify-center p-9 border rounded-full max-w-fit mx-auto mb-3"

@@ -4,17 +4,46 @@
 
 @layer base {
   h1 {
-    @apply text-6xl leading-relaxed;
-  }
-  h2 {
     @apply text-3xl leading-relaxed;
   }
-  h3 {
+
+  h2 {
     @apply text-2xl leading-relaxed;
+  }
+
+  h3 {
+    @apply text-xl leading-relaxed;
   }
 
   p {
     @apply text-lg leading-relaxed;
+  }
+
+  @screen md {
+    h1 {
+      @apply text-4xl;
+    }
+
+    h2 {
+      @apply text-3xl;
+    }
+
+    h3 {
+      @apply text-2xl;
+    }
+  }
+
+  @screen lg {
+    h1 {
+      @apply text-6xl;
+    }
+
+    h2 {
+      @apply text-4xl;
+    }
+    h3 {
+      @apply text-3xl;
+    }
   }
 }
 
