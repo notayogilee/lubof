@@ -2,6 +2,7 @@
 import { RouterLink, RouterView } from "vue-router";
 
 function scrollToSection(id) {
+  console.log(id);
   const section = document.getElementById(id);
   section.scrollIntoView({ behavior: "smooth" });
 }
@@ -12,7 +13,7 @@ function scrollToSection(id) {
     <nav class="container flex gap-5 justify-end">
       <ul class="flex gap-5">
         <li>
-          <button @click="scrollToSection('methodology')">Methodology</button>
+          <button @click="scrollToSection('inspiration')">Inspiration</button>
         </li>
         <li>
           <button @click="scrollToSection('about')">About</button>

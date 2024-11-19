@@ -22,14 +22,14 @@ const onMouseOut = () => {
   <a :href="href" @mouseover="onMouseOver" @mouseout="onMouseOut">
     <div class="relative overflow-hidden">
       <div
-        class="w-full absolute bottom-0 left-0 z-40 transition-all ease-in-out duration-500 img-gradient"
-        :class="isHovering ? 'px-3 pb-3 pt-20' : 'px-5 pb-5 pt-16'"
+        class="px-5 pb-5 pt-16 w-full absolute flex flex-col h-auto bottom-0 z-40 img-gradient transition-all ease-in-out duration-500"
       >
-        <h2
-          v-html="title"
-          class="absolute bottom-5 left-5 text-white transition-all ease-in-out duration-500"
-          :class="isHovering ? 'text-3xl text-bold' : 'text-2xl'"
-        ></h2>
+        <h2 v-html="title" id="articleTitle" class="text-white z-50"></h2>
+
+        <!-- <p
+          class="px-1 mt-5 text-white transition-all ease-in-out duration-500"
+          v-html="content"
+        ></p> -->
       </div>
       <img
         class="transition-all ease-in-out duration-500"
@@ -37,11 +37,6 @@ const onMouseOut = () => {
         :src="imgPath"
         alt="Our Story"
       />
-    </div>
-    <div class="">
-      <p class="p-1">
-        {{ content }}
-      </p>
     </div>
   </a>
 </template>

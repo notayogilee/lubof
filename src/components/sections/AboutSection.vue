@@ -84,7 +84,7 @@ const projects = [
       </aside>
     </div>
     <aside>
-      <div class="inline xl:inline-flex py-5">
+      <div class="inline-block xl:inline-flex my-7">
         <img
           :src="founders"
           alt="Richard and Greta"
@@ -122,7 +122,7 @@ const projects = [
           />
         </aside>
       </div>
-      <p>
+      <p class="my-5">
         Inspired by the magnificence of this path and enthused by its magic, we
         invite you on this journey of incarnating the divinity of all life on
         earth. We invite you to explore the divine principles with which
