@@ -16,7 +16,7 @@
   }
 
   p {
-    @apply text-lg leading-relaxed;
+    @apply text-xl leading-relaxed;
   }
 
   @screen md {

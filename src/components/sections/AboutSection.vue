@@ -1,44 +1,7 @@
 <script setup>
 import ArticleThumbnail from "../ArticleThumbnail.vue";
-import rainbowKauai from "../../assets/images/rainbow2-on-kauai.jpg";
-import prevSOL from "../../assets/images/Post-our-previous-SoL.jpg";
-import weEnvision from "../../assets/images/we-envision.png";
-import weManifest from "../../assets/images/we-manifest.jpg";
 import founders from "../../assets/images/founders.png";
-
-const articles = [
-  {
-    title: "Our Story",
-    imgPath: rainbowKauai,
-    content:
-      "We, Richard and Greta, feel very blessed to have encountered at a young age a remarkable man, spiritual teacher, who inspired us with an astounding ideal: to re-create paradise on earth. Read more...",
-    href: "our-story",
-  },
-  {
-    title: "Our Previous Space of Love",
-    imgPath: prevSOL,
-    content:
-      "In sharing our vision and mission it became clear how much our understanding, approach and methodology differ from the normal way of operating. We understood the importance of presenting a physical example, so people can feel and experience what we are talking about. Read more...",
-    href: "out-previous-space-of-love",
-  },
-];
-
-const projects = [
-  {
-    title: "We envision . . .<br> our Promissol Sanctuary",
-    imgPath: weEnvision,
-    content:
-      "The world, now, more than ever, needs living centers of awakened consciousness that will offer an example and can serve as a model of caring for our dear planet earth for generations to come …",
-    href: "we-envision-our-promissol-sanctuary",
-  },
-  {
-    title: "We manifest<br> our Promissol Sanctuary",
-    imgPath: weManifest,
-    content:
-      "Fostering our multidimensional connection with Universal Life, we uphold the inherent sacredness of all life, and pass on this responsibility of caring for our dear planet earth with its different kingdoms for future generations. Our lives become a Living School of Love where everyone opens up to the multi-dimensions of oneself, nature and the universe.",
-    href: "we-manifest-our-promissol-sanctuary",
-  },
-];
+import { aboutArticles, projectArticles } from "@/assets/articles";
 </script>
 
 <template>
@@ -72,14 +35,14 @@ const projects = [
     >
       <aside
         class="w-full md:w-1/2 max-w-lg"
-        v-for="{ title, content, imgPath, href } in articles"
+        v-for="{ title, imgPath, slug, id } in aboutArticles"
+        :key="id"
       >
         <ArticleThumbnail
           :title="title"
-          :content="content"
           :imgPath="imgPath"
-          :href="href"
-          :id="href"
+          :slug="slug"
+          :id="id"
         />
       </aside>
     </div>
@@ -111,14 +74,14 @@ const projects = [
       >
         <aside
           class="w-full md:w-1/2 max-w-lg"
-          v-for="{ title, content, imgPath, href } in projects"
+          v-for="{ title, imgPath, slug, id } in projectArticles"
+          :key="id"
         >
           <ArticleThumbnail
             :title="title"
-            :content="content"
             :imgPath="imgPath"
-            :href="href"
-            :id="href"
+            :slug="slug"
+            :id="id"
           />
         </aside>
       </div>
